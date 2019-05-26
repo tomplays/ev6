@@ -232,6 +232,19 @@ loadJSON(function(response) {
         lng: position.coords.longitude
       };
       map.setCenter(pos);
+      
+      var dpcenter = new google.maps.LatLng(pos.lat, pos.lng);
+        var marker = new google.maps.Marker({
+            position: dpcenter,
+          label:'+',
+            /*icon: icons[feature.type].icon,*/
+            title: "",
+            map: map
+          });
+      
+      
+      
+      
       //infoWindow.setPosition(pos);
       //infoWindow.setContent('Location found.');
       //infoWindow.open(map);
